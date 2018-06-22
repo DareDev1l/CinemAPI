@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataPackage.cs" />
+    <Compile Include="DomainPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +61,14 @@
     <ProjectReference Include="..\CinemAPI.Data\CinemAPI.Data.Contracts.csproj">
       <Project>{B591E11A-DF58-4DDB-8B92-D3DA896FCCF5}</Project>
       <Name>CinemAPI.Data.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CinemAPI.Domain.Contracts\CinemAPI.Domain.Contracts.csproj">
+      <Project>{87F9B363-DB5B-4171-B86D-3CC2D9B5A5BD}</Project>
+      <Name>CinemAPI.Domain.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CinemAPI.Domain\CinemAPI.Domain.csproj">
+      <Project>{E472D7CB-41CA-4F83-B47A-BFA6D406DFC0}</Project>
+      <Name>CinemAPI.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

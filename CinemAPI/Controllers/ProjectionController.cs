@@ -1,75 +1,33 @@
-﻿using CinemAPI.Data;
+﻿using CinemAPI.Domain.Contracts;
+using CinemAPI.Domain.Contracts.Models;
 using CinemAPI.Models;
-using CinemAPI.Models.Contracts.Movie;
-using CinemAPI.Models.Contracts.Projection;
 using CinemAPI.Models.Input.Projection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http;
 
 namespace CinemAPI.Controllers
 {
     public class ProjectionController : ApiController
     {
-        private readonly IProjectionRepository projectRepo;
-        private readonly IMovieRepository movieRepo;
+        private readonly INewProjection newProj;
 
-        public ProjectionController(IProjectionRepository projectRepo, IMovieRepository movieRepo)
+        public ProjectionController(INewProjection newProj)
         {
-            this.projectRepo = projectRepo;
-            this.movieRepo = movieRepo;
+            this.newProj = newProj;
         }
 
         [HttpPost]
         public IHttpActionResult Create(ProjectionCreationModel model)
         {
-            IProjection projection = projectRepo.Get(model.MovieId, model.RoomId, model.StartDate);
+            NewProjectionSummary summary = newProj.New(new Projection(model.MovieId, model.RoomId, model.StartDate));
 
-            if (projection != null)
+            if (summary.IsCreated)
             {
-                return BadRequest("Projection already exists");
+                return Ok();
             }
-
-            // TODO: Add validations for cinema, room and movie existing
-            IEnumerable<IProjection> movieProjectionsInRoom = projectRepo.GetActiveProjections(model.RoomId);
-            
-            IProjection previousProjection = movieProjectionsInRoom.Where(x => x.StartDate < model.StartDate)
-                                                                        .OrderByDescending(x => x.StartDate)
-                                                                        .FirstOrDefault();
-
-            if (previousProjection != null)
+            else
             {
-                IMovie previousProjectionMovie = movieRepo.GetById(previousProjection.MovieId);
-
-                DateTime previousProjectionEnd = previousProjection.StartDate.AddMinutes(previousProjectionMovie.DurationMinutes);
-
-                if (previousProjectionEnd >= model.StartDate)
-                {
-                    return BadRequest($"Projection overlaps with previous one: {previousProjectionMovie.Name} at {previousProjection.StartDate}");
-                }
+                return BadRequest(summary.Message);
             }
-
-            IProjection nextProjection = movieProjectionsInRoom.Where(x => x.StartDate > model.StartDate)
-                                                                       .OrderBy(x => x.StartDate)
-                                                                       .FirstOrDefault();
-
-            if (nextProjection != null)
-            {
-                IMovie curMovie = movieRepo.GetById(model.MovieId);
-                IMovie nextProjectionMovie = movieRepo.GetById(nextProjection.MovieId);
-
-                DateTime curProjectionEndTime = model.StartDate.AddMinutes(curMovie.DurationMinutes);
-
-                if (curProjectionEndTime >= nextProjection.StartDate)
-                {
-                    return BadRequest($"Projection overlaps with next one: {nextProjectionMovie.Name} at {nextProjection.StartDate}");
-                }
-            }
-
-            projectRepo.Insert(new Projection(model.MovieId, model.RoomId, model.StartDate));
-
-            return Ok();
         }
     }
 }
