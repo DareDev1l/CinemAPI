@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiniemAPI", "CiniemAPI\CiniemAPI.csproj", "{5E6F7AA0-7FA3-4F94-92A2-8B0B4BBE7F5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemAPI", "CinemAPI\CinemAPI.csproj", "{48D8CB75-D764-4FFE-807F-B76ACF2561DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemAPI.Models", "CinemAPI.Models\CinemAPI.Models.csproj", "{BA334908-BED7-43D3-B885-A8B529EC6D36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5E6F7AA0-7FA3-4F94-92A2-8B0B4BBE7F5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E6F7AA0-7FA3-4F94-92A2-8B0B4BBE7F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E6F7AA0-7FA3-4F94-92A2-8B0B4BBE7F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E6F7AA0-7FA3-4F94-92A2-8B0B4BBE7F5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48D8CB75-D764-4FFE-807F-B76ACF2561DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D8CB75-D764-4FFE-807F-B76ACF2561DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D8CB75-D764-4FFE-807F-B76ACF2561DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D8CB75-D764-4FFE-807F-B76ACF2561DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA334908-BED7-43D3-B885-A8B529EC6D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA334908-BED7-43D3-B885-A8B529EC6D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA334908-BED7-43D3-B885-A8B529EC6D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA334908-BED7-43D3-B885-A8B529EC6D36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
