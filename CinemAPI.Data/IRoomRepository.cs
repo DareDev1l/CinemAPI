@@ -4,8 +4,10 @@ namespace CinemAPI.Data
 {
     public interface IRoomRepository
     {
-        void Insert(IRoomCreation room);
+        IRoom GetById(int id);
 
         IRoom GetByCinemaAndNumber(int cinemaId, int number);
+
+        void Insert(IRoomCreation room);
     }
 }

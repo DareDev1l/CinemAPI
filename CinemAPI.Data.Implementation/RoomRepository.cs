@@ -9,6 +9,11 @@ namespace CinemAPI.Data.Implementation
             throw new System.NotImplementedException();
         }
 
+        public IRoom GetById(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void Insert(IRoomCreation room)
         {
             throw new System.NotImplementedException();
