@@ -1,9 +1,12 @@
 ﻿using CinemAPI.Models;
+using CinemAPI.Models.Contracts.Cinema;
 
 namespace CinemAPI.Data
 {
-    public interface ICinemaRepository : IRepository<Cinema>
+    public interface ICinemaRepository
     {
-        Cinema GetByNameAndAddress(string name, string address);
+        ICinema GetByNameAndAddress(string name, string address);
+
+        void Insert(ICinemaCreation cinema);
     }
 }

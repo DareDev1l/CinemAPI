@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B591E11A-DF58-4DDB-8B92-D3DA896FCCF5}</ProjectGuid>
+    <ProjectGuid>{6599FDBF-A597-4B63-8DA6-62BA0958DBCA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CinemAPI.Data</RootNamespace>
-    <AssemblyName>CinemAPI.Data</AssemblyName>
+    <RootNamespace>CinemAPI.Models.Contracts</RootNamespace>
+    <AssemblyName>CinemAPI.Models.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,18 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICinemaRepository.cs" />
+    <Compile Include="Cinema\ICinema.cs" />
+    <Compile Include="Cinema\ICinemaCreation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CinemAPI.Models.Contracts\CinemAPI.Models.Contracts.csproj">
-      <Project>{6599FDBF-A597-4B63-8DA6-62BA0958DBCA}</Project>
-      <Name>CinemAPI.Models.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CinemAPI.Models\CinemAPI.Models.csproj">
-      <Project>{BA334908-BED7-43D3-B885-A8B529EC6D36}</Project>
-      <Name>CinemAPI.Models</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
