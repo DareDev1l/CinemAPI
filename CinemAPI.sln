@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemAPI.Data.Contracts", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemAPI.Models.Contracts", "CinemAPI.Models.Contracts\CinemAPI.Models.Contracts.csproj", "{6599FDBF-A597-4B63-8DA6-62BA0958DBCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemAPI.IoCContainer", "CinemAPI.IoCContainer\CinemAPI.IoCContainer.csproj", "{6F75CD0F-3529-454C-ACAF-14028FC350A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemAPI.Data.Implementation", "CinemAPI.Data.Implementation\CinemAPI.Data.Implementation.csproj", "{66A685FD-C5ED-4F5A-BB5E-83E459EE3E97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{6599FDBF-A597-4B63-8DA6-62BA0958DBCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6599FDBF-A597-4B63-8DA6-62BA0958DBCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6599FDBF-A597-4B63-8DA6-62BA0958DBCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F75CD0F-3529-454C-ACAF-14028FC350A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F75CD0F-3529-454C-ACAF-14028FC350A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F75CD0F-3529-454C-ACAF-14028FC350A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F75CD0F-3529-454C-ACAF-14028FC350A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A685FD-C5ED-4F5A-BB5E-83E459EE3E97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A685FD-C5ED-4F5A-BB5E-83E459EE3E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A685FD-C5ED-4F5A-BB5E-83E459EE3E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A685FD-C5ED-4F5A-BB5E-83E459EE3E97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
