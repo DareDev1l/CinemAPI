@@ -1,9 +1,21 @@
-﻿using System;
+﻿using CinemAPI.Models.Contracts.Projection;
+using System;
 
 namespace CinemAPI.Models
 {
-    public class Projection
+    public class Projection : IProjection, IProjectionCreation
     {
+        public Projection()
+        {
+        }
+
+        public Projection(int movieId, int roomId, DateTime startdate)
+        {
+            this.MovieId = movieId;
+            this.RoomId = roomId;
+            this.StartDate = startdate;
+        }
+
         public long Id { get; set; }
 
         public int RoomId { get; set; }

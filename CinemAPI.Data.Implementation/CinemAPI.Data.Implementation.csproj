@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CinemaRepository.cs" />
     <Compile Include="MovieRepository.cs" />
+    <Compile Include="ProjectionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomRepository.cs" />
   </ItemGroup>
