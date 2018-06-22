@@ -2,12 +2,12 @@
 {
     public interface IRoomCreation
     {
-        int Number { get; set; }
+        int Number { get; }
 
-        short SeatsPerRow { get; set; }
+        short SeatsPerRow { get; }
 
-        short Rows { get; set; }
+        short Rows { get; }
 
-        int CinemaId { get; set; }
+        int CinemaId { get; }
     }
 }

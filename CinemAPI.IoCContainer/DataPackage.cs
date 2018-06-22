@@ -11,6 +11,7 @@ namespace CinemAPI.IoCContainer
         {
             container.Register<ICinemaRepository, CinemaRepository>();
             container.Register<IRoomRepository, RoomRepository>();
+            container.Register<IMovieRepository, MovieRepository>();
         }
     }
 }
