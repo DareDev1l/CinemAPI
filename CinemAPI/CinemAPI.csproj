@@ -110,6 +110,10 @@
       <Project>{b591e11a-df58-4ddb-8b92-d3da896fccf5}</Project>
       <Name>CinemAPI.Data.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CinemAPI.Models.Contracts\CinemAPI.Models.Contracts.csproj">
+      <Project>{6599FDBF-A597-4B63-8DA6-62BA0958DBCA}</Project>
+      <Name>CinemAPI.Models.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CinemAPI.Models\CinemAPI.Models.csproj">
       <Project>{BA334908-BED7-43D3-B885-A8B529EC6D36}</Project>
       <Name>CinemAPI.Models</Name>

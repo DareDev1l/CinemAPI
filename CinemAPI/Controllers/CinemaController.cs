@@ -1,5 +1,6 @@
 ﻿using CinemAPI.Data;
 using CinemAPI.Models;
+using CinemAPI.Models.Contracts.Cinema;
 using CinemAPI.Models.Input.Cinema;
 using System.Web.Http;
 
@@ -14,13 +15,13 @@ namespace CinemAPI.Controllers
             this.cinemaRepo = cinemaRepo;
         }
 
-        public IHttpActionResult Create(CinemaCreationModel model)
+        public IHttpActionResult Create(ICinemaCreation model)
         {
-            Cinema cinema = cinemaRepo.GetByNameAndAddress(model.Name, model.Address);
+            ICinema cinema = cinemaRepo.GetByNameAndAddress(model.Name, model.Address);
 
             if (cinema == null)
             {
-                cinemaRepo.Insert(cinema);
+                cinemaRepo.Insert(new Cinema(cinema.Name, cinema.Address));
 
                 return Ok();
             }
