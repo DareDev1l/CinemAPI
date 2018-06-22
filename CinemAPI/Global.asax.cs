@@ -16,7 +16,8 @@ namespace CinemAPI
 
             IPackage[] packages = new IPackage[]
             {
-                new DataPackage()
+                new DataPackage(),
+                new DomainPackage()
             };
 
             foreach (IPackage package in packages)
