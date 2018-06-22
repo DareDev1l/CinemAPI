@@ -2,10 +2,14 @@
 {
     public class Room
     {
-        public short Number { get; set; }
+        public int Id { get; set; }
+
+        public int Number { get; set; }
 
         public short SeatsPerRow { get; set; }
 
         public short Rows { get; set; }
+
+        public int CinemaId { get; set; }
     }
 }
