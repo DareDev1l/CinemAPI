@@ -10,6 +10,7 @@ namespace CinemAPI.IoCContainer
         public void RegisterServices(Container container)
         {
             container.Register<ICinemaRepository, CinemaRepository>();
+            container.Register<IRoomRepository, RoomRepository>();
         }
     }
 }
