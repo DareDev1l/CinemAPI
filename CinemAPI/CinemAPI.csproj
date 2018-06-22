@@ -86,9 +86,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CinemaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Input\Cinema\CinemaCreationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -102,8 +104,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CinemAPI.Data\CinemAPI.Data.Contracts.csproj">
+      <Project>{b591e11a-df58-4ddb-8b92-d3da896fccf5}</Project>
+      <Name>CinemAPI.Data.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CinemAPI.Models\CinemAPI.Models.csproj">
+      <Project>{BA334908-BED7-43D3-B885-A8B529EC6D36}</Project>
+      <Name>CinemAPI.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
