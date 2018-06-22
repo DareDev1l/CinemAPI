@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemAPI", "CinemAPI\CinemA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemAPI.Models", "CinemAPI.Models\CinemAPI.Models.csproj", "{BA334908-BED7-43D3-B885-A8B529EC6D36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemAPI.Data.Contracts", "CinemAPI.Data\CinemAPI.Data.Contracts.csproj", "{B591E11A-DF58-4DDB-8B92-D3DA896FCCF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BA334908-BED7-43D3-B885-A8B529EC6D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA334908-BED7-43D3-B885-A8B529EC6D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA334908-BED7-43D3-B885-A8B529EC6D36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B591E11A-DF58-4DDB-8B92-D3DA896FCCF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B591E11A-DF58-4DDB-8B92-D3DA896FCCF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B591E11A-DF58-4DDB-8B92-D3DA896FCCF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B591E11A-DF58-4DDB-8B92-D3DA896FCCF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
