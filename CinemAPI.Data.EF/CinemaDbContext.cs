@@ -1,6 +1,7 @@
-﻿using CinemAPI.Models;
+﻿using CinemAPI.Data.EF.ModelConfigurations;
+using CinemAPI.Models;
+using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration;
 
 namespace CinemAPI.Data.EF
 {
@@ -19,5 +20,23 @@ namespace CinemAPI.Data.EF
         public virtual IDbSet<Movie> Movies { get; set; }
 
         public virtual IDbSet<Projection> Projections { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            IEnumerable<IModelConfiguration> modelConfigurations = new List<IModelConfiguration>()
+            {
+                new CinemaModelConfiguration(),
+                new MovieModelConfiguration(),
+                new ProjectionModelConfiguration(),
+                new RoomModelConfiguration(),
+            };
+
+            foreach (IModelConfiguration configurationModel in modelConfigurations)
+            {
+                configurationModel.Configure(modelBuilder);
+            }
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
