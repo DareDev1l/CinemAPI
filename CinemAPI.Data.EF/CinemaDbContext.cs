@@ -1,5 +1,6 @@
 ﻿using CinemAPI.Models;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration;
 
 namespace CinemAPI.Data.EF
 {
@@ -8,6 +9,7 @@ namespace CinemAPI.Data.EF
         public CinemaDbContext()
             : base("CinemaDbContext")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<CinemaDbContext, MigrationConfiguration>());
         }
 
         public virtual IDbSet<Cinema> Cinemas { get; set; }
