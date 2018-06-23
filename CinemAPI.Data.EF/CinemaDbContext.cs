@@ -10,6 +10,9 @@ namespace CinemAPI.Data.EF
         public CinemaDbContext()
             : base("CinemaDbContext")
         {
+            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
+
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<CinemaDbContext, MigrationConfiguration>());
         }
 
