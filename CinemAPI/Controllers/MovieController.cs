@@ -16,7 +16,7 @@ namespace CinemAPI.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult Create(MovieCreationModel model)
+        public IHttpActionResult Index(MovieCreationModel model)
         {
             IMovie movie = movieRepo.GetByNameAndDuration(model.Name, model.DurationMinutes);
 

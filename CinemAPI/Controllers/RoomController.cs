@@ -16,7 +16,7 @@ namespace CinemAPI.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult Create(RoomCreationModel model)
+        public IHttpActionResult Index(RoomCreationModel model)
         {
             IRoom room = roomRepo.GetByCinemaAndNumber(model.CinemaId, model.Number);
 

@@ -16,7 +16,7 @@ namespace CinemAPI.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult Create(CinemaCreationModel model)
+        public IHttpActionResult Index(CinemaCreationModel model)
         {
             ICinema cinema = cinemaRepo.GetByNameAndAddress(model.Name, model.Address);
 
