@@ -9,7 +9,7 @@ namespace CinemAPI.Data.EF.ModelConfigurations
         public void Configure(DbModelBuilder modelBuilder)
         {
             EntityTypeConfiguration<Projection> projectionModel = modelBuilder.Entity<Projection>();
-            projectionModel.HasKey(model => model);
+            projectionModel.HasKey(model => model.Id);
             projectionModel.Property(model => model.MovieId).IsRequired();
             projectionModel.Property(model => model.RoomId).IsRequired();
             projectionModel.Property(model => model.StartDate).IsRequired();
