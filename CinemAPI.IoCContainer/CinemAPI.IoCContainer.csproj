@@ -54,6 +54,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CinemAPI.Data.EF\CinemAPI.Data.EF.csproj">
+      <Project>{C589E68E-1612-44B0-BFAF-180347B4C8C1}</Project>
+      <Name>CinemAPI.Data.EF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CinemAPI.Data.Implementation\CinemAPI.Data.Implementation.csproj">
       <Project>{66A685FD-C5ED-4F5A-BB5E-83E459EE3E97}</Project>
       <Name>CinemAPI.Data.Implementation</Name>

@@ -1,17 +1,33 @@
-﻿using CinemAPI.Models.Contracts.Cinema;
+﻿using CinemAPI.Data.EF;
+using CinemAPI.Models;
+using CinemAPI.Models.Contracts.Cinema;
+using System.Linq;
 
 namespace CinemAPI.Data.Implementation
 {
     public class CinemaRepository : ICinemaRepository
     {
+        private readonly CinemaDbContext db;
+
+        public CinemaRepository(CinemaDbContext db)
+        {
+            this.db = db;
+        }
+
         public ICinema GetByNameAndAddress(string name, string address)
         {
-            throw new System.NotImplementedException();
+            return db.Cinemas.Where(x => x.Name == name &&
+                                         x.Address == address)
+                             .FirstOrDefault();
         }
 
         public void Insert(ICinemaCreation cinema)
         {
-            throw new System.NotImplementedException();
+            Cinema newCinema = new Cinema(cinema.Name, cinema.Address);
+
+            db.Cinemas.Add(newCinema);
+
+            db.SaveChanges();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace CinemAPI.Controllers
 
             if (cinema == null)
             {
-                cinemaRepo.Insert(new Cinema(cinema.Name, cinema.Address));
+                cinemaRepo.Insert(new Cinema(model.Name, model.Address));
 
                 return Ok();
             }
