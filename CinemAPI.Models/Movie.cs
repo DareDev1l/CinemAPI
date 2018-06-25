@@ -1,4 +1,5 @@
 ﻿using CinemAPI.Models.Contracts.Movie;
+using System.Collections.Generic;
 
 namespace CinemAPI.Models
 {
@@ -6,9 +7,11 @@ namespace CinemAPI.Models
     {
         public Movie()
         {
+            this.Projections = new List<Projection>();
         }
 
         public Movie(string name, short durationInMinutes)
+            : this()
         {
             this.Name = name;
             this.DurationMinutes = durationInMinutes;
@@ -19,5 +22,7 @@ namespace CinemAPI.Models
         public string Name { get; set; }
 
         public short DurationMinutes { get; set; }
+
+        public virtual ICollection<Projection> Projections { get; set; }
     }
 }

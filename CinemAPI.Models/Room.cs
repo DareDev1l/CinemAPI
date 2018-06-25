@@ -1,4 +1,5 @@
 ﻿using CinemAPI.Models.Contracts.Room;
+using System.Collections.Generic;
 
 namespace CinemAPI.Models
 {
@@ -6,9 +7,11 @@ namespace CinemAPI.Models
     {
         public Room()
         {
+            this.Projections = new List<Projection>();
         }
 
         public Room(int number, short seatsPerRow, short rows, int cinemaId)
+            : this()
         {
             this.Number = number;
             this.SeatsPerRow = seatsPerRow;
@@ -25,5 +28,10 @@ namespace CinemAPI.Models
         public short Rows { get; set; }
 
         public int CinemaId { get; set; }
+
+        public virtual Cinema Cinema { get; set; }
+
+        public virtual ICollection<Projection> Projections { get; set; }
+
     }
 }
